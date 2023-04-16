@@ -27,8 +27,8 @@ export default function SimpleSnackbar() {
   return (
     <Stack spacing={2} >
     
-      <button onClick={handleClick} class="group mt-20 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group  hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-orange-800 active:bg-green-200">
-        <span class="relative px-10 py-2.5 transition-all ease-in duration-75 bg-white bg-gradient-to-br from-red-500 to-orange-500 group-hover:from-red-500 group-hover:to-orange-500 rounded-md group-hover:bg-opacity-0">
+      <button onClick={handleClick} class="group mt-20 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group  hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-teal-200 dark:focus:ring-green-800 active:bg-green-200">
+        <span class="relative px-10 py-2.5 transition-all ease-in duration-75 bg-white bg-gradient-to-br from-teal-500 to-green-500 group-hover:from-teal-500 group-hover:to-green-500 rounded-md group-hover:bg-opacity-0">
           <p class="group-hover:scale-[1.03] text-white transition"> Unlock Door </p>
         </span>
       </button>
@@ -42,11 +42,11 @@ export default function SimpleSnackbar() {
 
         {window.isStreamAuthenticated? 
         <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-          Door Unlocked! Welcome Home!
+          Door Unlocked! Welcome Home ! 
         </Alert> 
         : 
         <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
-          Please Pay Before Using The Room
+          Please Pay Before Using The Room !
         </Alert>         }
 
       </Snackbar>
