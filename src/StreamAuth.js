@@ -5,7 +5,7 @@ class StreamAuth extends Component {
     constructor(props) {
       super(props);
       this.state = { 
-        isStreamAuthenticated: false,
+        isStreamAuthenticated: null,
         address: ""
       };
       this.tokenStreamAuthentication = this.tokenStreamAuthentication.bind(this);
@@ -17,6 +17,7 @@ class StreamAuth extends Component {
       this.timerID = setInterval(
         () => {
             this.tokenStreamAuthentication();
+            console.log("STREAMAUTH.JS: this.state.isStreamAuthenticated: ", this.state.isStreamAuthenticated);
         }, 5000
       );
     }
@@ -70,11 +71,12 @@ class StreamAuth extends Component {
         console.log("StreamAuth.js: window.isStreamAuthenticated: ", window.isStreamAuthenticated)
     }
     
-
+    
+    
     render() {
       return (
         <div>
-          <div class="subscribe-status">{this.state.isStreamAuthenticated? "Authorized": "Unauthorized"}</div> 
+          <div class="subscribe-status">{this.state.isStreamAuthenticated? "PAID": "NOT PAID"}</div> 
         </div>
         );
     }

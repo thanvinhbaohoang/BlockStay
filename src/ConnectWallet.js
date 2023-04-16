@@ -78,7 +78,12 @@ import {
     if (isConnected) {
       window.isConnected = true;
       window.address = address;
-      
+    }
+
+    if (isDisconnected) {
+      window.isConnected = false;
+      window.address = "";
+
     }
     return (
       <> 

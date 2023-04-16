@@ -60,6 +60,8 @@ class App extends React.Component {
       () => {
           if (window.isConnected) {
           this.setState({ isConnected: true })
+          } else {
+          this.setState({ isConnected: false })
           }
       }, 1000
     );
