@@ -44,37 +44,6 @@ const wagmiClient = createClient({
 
 // Web3Modal Ethereum Client
 const ethereumClient = new EthereumClient(wagmiClient, chains);
-//https://docs.walletconnect.com/2.0/web3modal/react/installation#usage
-
-
-// export function ConnectWallet() {
-//   return (
-//     <>
-//       <WagmiConfig client={wagmiClient}>
-//         <Web3Button /> 
-//         {/* <WalletData/> */}
-//       </WagmiConfig>
-
-//       <Web3Modal
-//           projectId="<YOUR_PROJECT_ID>"
-//           ethereumClient={ethereumClient}
-//           themeMode = {'dark'}
-//           enableAccountView = {"false"}
-//           enableExplorer = {'false'}
-//           defaultChain={goerli}
-          
-//           themeVariables={{
-//             '--w3m-font-family': 'Roboto, sans-serif',
-//             '--w3m-accent-color': '#7FC051',
-//             '--w3m-background-color'	: '#7FC051',
-//             '--w3m-button-border-radius' : "8px",
-//             '--w3m-logo-image-url	' : "none",
-//           }}
-//         />
-//     </>
-//   );
-// }
-
 
 class App extends React.Component {
   constructor(props) {
@@ -91,7 +60,6 @@ class App extends React.Component {
       () => {
           if (window.isConnected) {
           this.setState({ isConnected: true })
-          console.log('App.js: AUTH INTERVAL: ', window.isConnected)
           }
       }, 1000
     );

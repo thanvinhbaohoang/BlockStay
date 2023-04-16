@@ -6,6 +6,8 @@ import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import QRCode from 'react-qr-code';
+import StreamAuth from './StreamAuth';
+
 
 const style = {
   position: 'absolute',
@@ -29,7 +31,7 @@ export default function StreamTutorialModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open dal</Button>
+      <Button onClick={handleOpen}><StreamAuth/></Button>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -60,6 +62,7 @@ export default function StreamTutorialModal() {
             </p>
 
             <p className='text-sm self-center'>0x45C01cEB87dbe6807EBECb9161408fC5c6AcB5d1 </p>
+            <div className='self-center'> 
             <Typography id="transition-modal-description" sx={{ mt: 2 }}>
             <p className='text-md font-bold uppercase'>            
               1. Go to Superfluid dashboard
@@ -84,8 +87,9 @@ export default function StreamTutorialModal() {
             </p>        
 
             <p className='font-thin'>
-            Open a stream to another crypto wallet            </p>
+            Open a stream to this room's address            </p>
              </Typography>
+            </div>
           </Box>
         </Fade>
       </Modal>

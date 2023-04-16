@@ -3,6 +3,7 @@ import { ConnectWallet } from './ConnectWallet';
 import { WalletData } from './ConnectWallet';
 import { WalletAddress } from './ConnectWallet';
 import StreamTutorialModal from './StreamTutorialModal';
+import StreamAuth from './StreamAuth';
 
 export default class OccupiedRoom extends React.Component {
     render() {
@@ -12,7 +13,6 @@ export default class OccupiedRoom extends React.Component {
                     <h3 className='font-medium'> ROOM </h3>
                     <h1 className='text-9xl font-bold'> 127</h1>
                     <p className='text-red-600'> BOOKED</p>
-                    <StreamTutorialModal/>
                     
                     <div className='text-sm text-red-500'>  
                     
@@ -30,10 +30,11 @@ export default class OccupiedRoom extends React.Component {
                             </p>
 
                         </div>
-
-
                     </div>
 
+                    <div className='self-center border-4 radius-lg '>
+                            <StreamTutorialModal/>
+                        </div>
                     {/* <ConnectWallet/> */}
 
                     <button class="group mt-20 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-orange-500 group-hover:from-red-500 group-hover:to-orange-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-red-200 dark:focus:ring-orange-800">
