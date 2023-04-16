@@ -44,8 +44,8 @@ import {
             
             themeVariables={{
               '--w3m-font-family': 'Roboto, sans-serif',
-              '--w3m-accent-color': '#7FC051',
-              '--w3m-background-color'	: '#7FC051',
+              '--w3m-accent-color': '#5783b1',
+              '--w3m-background-color'	: '#5783b1',
               '--w3m-button-border-radius' : "8px",
               '--w3m-logo-image-url	' : "none",
             }}
