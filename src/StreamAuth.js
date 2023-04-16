@@ -76,7 +76,10 @@ class StreamAuth extends Component {
     render() {
       return (
         <div>
-          <div class="subscribe-status">{this.state.isStreamAuthenticated? "PAID": "NOT PAID"}</div> 
+          <div class="text-red-600">{this.state.isStreamAuthenticated? ""
+          : 
+          <div class="text-red-600 font-bold border-4 p-2 rounded-lg">Pay Here To Use Room</div>
+          }</div> 
         </div>
         );
     }

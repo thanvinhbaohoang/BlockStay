@@ -65,7 +65,7 @@ export default function StreamTutorialModal() {
             <div className='self-center'> 
             <Typography id="transition-modal-description" sx={{ mt: 2 }}>
             <p className='text-md font-bold uppercase'>            
-              1. Go to Superfluid dashboard
+              1. Go to <a href="https://app.superfluid.finance/send" className="text-green-600"> Superfluid Dashboard </a>
             </p>
             <p className='font-thin'>
             Connect to Web3Provider (Metamask)
