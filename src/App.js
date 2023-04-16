@@ -70,7 +70,7 @@ class App extends React.Component {
 
   render(){
     return (
-      <WagmiConfig client={wagmiClient}>
+      // <WagmiConfig client={wagmiClient}>
 
       <div className='flex-col items-center'>
         <Background />
@@ -81,7 +81,7 @@ class App extends React.Component {
         {/* <ConnectWallet /> */}
       </div>
 
-    </WagmiConfig>
+    // </WagmiConfig>
         )
 
   }

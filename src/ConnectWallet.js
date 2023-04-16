@@ -1,39 +1,27 @@
 import {
     EthereumClient,
     w3mConnectors,
+    w3mProvider
   } from "@web3modal/ethereum";
   import axios from "axios";
   import { Web3Modal } from "@web3modal/react";
   import { useAccount, useConnect, useDisconnect, useEnsAvatar,useNetwork, useProvider, useSigner, useEnsName} from 'wagmi'
   import { configureChains, createClient, WagmiConfig } from "wagmi";
-  import { alchemyProvider } from 'wagmi/providers/alchemy'
-  import { infuraProvider } from 'wagmi/providers/infura'
-  import { publicProvider } from 'wagmi/providers/public'
   import { goerli } from "wagmi/chains";
   import { Web3Button } from "@web3modal/react";
   
   
-  const chains = [goerli];
-  const { provider } = configureChains(
-    chains,
-    [
-      alchemyProvider({ apiKey: 'Eje_Y-pqB-HZwxVWpOYEUQoB44DhjZGO' }),
-      infuraProvider({ apiKey: '2FTMzOge17hhTwy3mfVXN4T7L3j' }),
-      publicProvider(),
-    ],
-  )
+  // Get projectID at https://cloud.walletconnect.com
+  const chains = [goerli]
+  const projectId = 'e983ebfcac71d2238bff4be5adf4a941'
   
+  const { provider } = configureChains(chains, [w3mProvider({ projectId })])
   const wagmiClient = createClient({
     autoConnect: true,
-    connectors: w3mConnectors({
-      projectId: "<YOUR_PROJECT_ID>",
-      version: "1", // or "2"
-      appName: "web3Modal",
-      chains,
-    }),
-    provider,
-  });
-  
+    connectors: w3mConnectors({ projectId, version: 1, chains }),
+    provider
+  })
+
   // Web3Modal Ethereum Client
   const ethereumClient = new EthereumClient(wagmiClient, chains);
   //https://docs.walletconnect.com/2.0/web3modal/react/installation#usage
@@ -41,13 +29,13 @@ import {
   export function ConnectWallet() {
     return (
       <>
-        {/* <WagmiConfig client={wagmiClient}> */}
+        <WagmiConfig client={wagmiClient}>
           <Web3Button /> 
           <WalletStatus/>
-        {/* </WagmiConfig> */}
+        </WagmiConfig>
   
         <Web3Modal
-            projectId="<YOUR_PROJECT_ID>"
+            projectId="e983ebfcac71d2238bff4be5adf4a941"
             ethereumClient={ethereumClient}
             themeMode = {'dark'}
             enableAccountView = {"false"}
@@ -71,9 +59,7 @@ import {
   export const WalletStatus = () => {
     // Wallet Data From Wagmi
     const { address, isConnected, isDisconnected } = useAccount();
-    const { data: signer, isError, isLoading } = useSigner();  // https://wagmi.sh/react/hooks/useSigner
-    const { chain, chains } = useNetwork()
-    const provider = useProvider()
+
  
     if (isConnected) {
       window.isConnected = true;
