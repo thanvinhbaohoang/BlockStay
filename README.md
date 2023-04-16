@@ -1,5 +1,7 @@
 # What is BlockStay
 
+![image](https://user-images.githubusercontent.com/9410877/232322078-af4ff9d6-18fa-42c3-976a-d9673ba5c848.png)
+
 Checkout BlockStay On [DevPost](https://devpost.com/software/blockstay).
 
 BlockStay is A Blockchain-Based Pay-as-you-go Hotel Rental and Access Service. It is a secure and efficient way to rent and access hotel rooms using blockchain wallets. The use of blockchain ensures that transactions are transparent, secure, and tamper-proof, while smart locks enable guests to unlock and lock their rooms using a digital key on their smartphone. This technology provides added security and convenience for both guests and hotel operators, and can streamline the check-in and check-out process.
