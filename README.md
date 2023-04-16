@@ -1,5 +1,9 @@
 # What is BlockStay
 
+# Figma link: 
+https://www.figma.com/file/q7DPWhaNb3XlDsBNC4VUfv/MeterStream?node-id=5%3A245&t=sZXJQsX1MYEUtzE1-1
+![image](https://user-images.githubusercontent.com/9410877/232322078-af4ff9d6-18fa-42c3-976a-d9673ba5c848.png)
+
 Checkout BlockStay On [DevPost](https://devpost.com/software/blockstay).
 
 BlockStay is A Blockchain-Based Pay-as-you-go Hotel Rental and Access Service. It is a secure and efficient way to rent and access hotel rooms using blockchain wallets. The use of blockchain ensures that transactions are transparent, secure, and tamper-proof, while smart locks enable guests to unlock and lock their rooms using a digital key on their smartphone. This technology provides added security and convenience for both guests and hotel operators, and can streamline the check-in and check-out process.
@@ -15,10 +19,6 @@ I really wish we could just show up at a hotel, pay for a room right there on th
 This open-source technology allows users to pay the hotel by initiating a "stream" payment with real settlement by the seconds (which traditional banking transfer cannot achieve), and check-in and unlock the IoT-enabled hotel room door using their blockchain wallet on their smartphone. It is a decentralized rental platform with secure identity verification. 
 
 ![image](https://user-images.githubusercontent.com/9410877/232323732-63779c42-c421-43cb-8d16-6164fc8fdf8f.png)
-
-# Figma link: 
-https://www.figma.com/file/q7DPWhaNb3XlDsBNC4VUfv/MeterStream?node-id=5%3A245&t=sZXJQsX1MYEUtzE1-1
-![image](https://user-images.githubusercontent.com/9410877/232322078-af4ff9d6-18fa-42c3-976a-d9673ba5c848.png)
 
 # Presentation and video
 You can find more detail in the [video](https://www.youtube.com/watch?v=-aq-by1Gcvc) and [slides](https://github.com/thanvinhbaohoang/BlockStayNew/tree/main/assets) here
